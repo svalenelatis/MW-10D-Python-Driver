@@ -1,0 +1,1847 @@
+System Installation
+
+2.5
+
+Initial Turn-on Procedure
+Once you have all the equipment properly connected (see section 2.3),
+the system can be powered up to check for proper operation.
+The following steps outline the proper start-up procedure.
+1.
+
+Apply power to the RFC-5MW by setting its POWER switch to the
+ON position.
+
+2.
+
+Turn ON the 24 VDC supply that is powering the MW-10D and
+wait for the RESET light on the controller unit to go out.
+After the reset, you should see a display on the front panel of the
+RFC-5MW showing the status of the MW-10D. This should
+include a value for C1 and C2 position, a DC BIAS reading
+(probably 0 at this point), a PRESET location number, and the
+current tuning MODE (either AUTO or MAN).
+
+3.
+
+Apply AC power to the generator.
+
+4.
+
+Adjust the RF power level on the generator to zero and make sure
+the RF POWER switch is OFF.
+
+5.
+
+Press the MODE button on the RFC-5MW to select AUTO mode.
+
+6.
+
+Press the PSET up button as many times as necessary to select
+PRESET A. This will set both tuning capacitors to their maximum
+position and the RFC-5MW should display 99 in the C1 and C2
+fields.
+
+7.
+
+Set the chamber for the required reaction gasses and adjust the
+pressure to an appropriate level.
+
+8.
+
+Set the generator's RF power level to 100 W.
+
+9.
+
+Turn on the generator's RF power and watch the system closely.
+At this point the MW-10D tuning capacitors should start moving
+and the numbers on the RFC-5MW display will be changing.
+After a few seconds this activity should stop; the system will be
+tuned and the plasma in the chamber should be ignited.
+
+10. Turn the RF POWER OFF. The tuning capacitors should now
+move back to the MAX/MAX position (C1=99, C2=99).
+If the system does not appear to be tuning properly, refer to
+Appendices D and E.
+
+2-6
+
+MW-10D
+
+Operation
+
+Chapter 3
+
+MW-10D Operation
+3.1
+
+Controller Unit LEDs
+The MW-10D controller unit has six LEDs that indicate the operational
+status of the matching network. These LEDs perform the same
+function in all modes of operation.
+LED
+
+MW-10D
+
+Function
+
+C1 MIN/MAX
+
+These two LEDs indicate when the C1 tuning capacitor is at one
+end of its travel, either minimum or maximum.
+
+C2 MIN/MAX
+
+These two LEDs indicate when the C2 tuning capacitor is at one
+end of its travel, either minimum or maximum.
+
+RESET
+
+This LED is ON when the controller is in a reset condition. The LED
+is OFF during normal operation.
+
+FAULT
+
+This LED is OFF during normal operation. If there is a fault in the
+controller, this LED blinks or may remain ON permanently.
+
+3-1
+
+Operation
+
+3.2
+
+Modes of Operation
+The MW-10D is a versatile system that can be operated in a variety of
+ways. Many combinations of control and tuning modes are available
+for the user to select.
+The following diagram (Figure 3.2) shows the various options available:
+
+Automatic Control
+Auto
+Tune
+
+User Control
+
+RFC-5MW
+Local
+Auto
+Tune
+
+Analog
+Control
+
+Remote
+
+Manual
+Tune
+
+Auto
+Tune
+
+Manual
+Tune
+
+Remote
+
+Computer
+Terminal
+Local
+Auto
+Tune
+
+Manual
+Tune
+
+MW-10D Options
+Figure 3.2
+
+3.2.1
+
+Control Mode
+The MW-10D can be directly controlled by the user or automatically
+controlled on its own.
+User Control mode allows the user to have complete control of the
+MW-10D using digital or analog signals on the Remote Interface port.
+Digital control is accomplished with the use of an RFC-5MW,
+computer, or terminal (see section 3.3).
+Automatic Control mode allows the MW-10D to operate as a standalone device requiring no user interaction. The unit will be locked into
+Auto Tune mode, thereby automatically tuning into the chamber
+whenever RF power is detected (see section 3.4).
+The control mode is selected by DIP Switch #12 inside the MW-10D
+controller unit (see Appendix C).
+
+3.2.2
+
+Local/Remote Operation
+When operating in User Control mode, a digital device must be used to
+communicate with the MW-10D. This could be an RFC-5MW,
+computer, or terminal. However, the digital device may be disabled to
+allow analog DC voltages to control the MW-10D. The user may select
+between Local control, using the digital device; or Remote control,
+using the analog signals. This selection is made from the digital unit.
+
+3-2
+
+MW-10D
+
+Operation
+
+3.2.3
+
+Tuning Mode
+The MW-10D can be set to tune manually or automatically. The
+following sections in this chapter describe the many different ways to
+move the tuning capacitors while in Manual Tune mode. In Auto Tune
+mode the MW-10D will automatically set the tuning capacitors to
+achieve the best possible match with the chamber. Accurate tuning is
+achieved by the MW-10D's microprocessor-based control, derived from
+input signals from the Phase/Mag sensors mounted in the tuner unit.
+
+MW-10D
+
+3-3
+
+Operation
+
+3.3
+
+User-controlled Operation
+When the MW-10D is operated in the User Control mode, three options
+are available to control the MW-10D through the Remote Interface
+port:
+•
+•
+•
+
+3.3.1
+
+Local control with an RFC-5MW
+Local control with a computer or terminal
+Remote Analog control using DC voltages on the port
+
+Local Operation with an RFC-5MW
+The RFC-5MW is a digital unit that communicates with the MW-10D
+through the digital portion of the remote interface. It is designed
+specifically to ease the task of controlling the matching network. This
+is accomplished through the use of the RFC-5MW's front panel (Figure
+3.3.1), which is divided into two major sections. The first section is a
+two-line, twenty-column fluorescent display used to monitor the status
+of the MW-10D. The second section is a set of eleven push-button
+switches that are used to control such functions as capacitor
+movement, tuning mode selection and tune position storage.
+Display for status monitoring
+DC BIAS
+
+PRESET
+
+MODE
+
+MEMORY
+SETUP
+LOC/REM
+
+PSET
+
+CI
+
+C2
+
+POSITION
+
+STO
+
+MODE
+
+CI
+
+POWER
+
+C2
+
+RCL
+
+RFC - 5MW
+RF CONTROLLER
+Pushbutton switches
+for primary control
+
+Non-accidental
+power switch
+
+RFC-5MW Front Panel
+Figure 3.3.1
+
+3-4
+
+MW-10D
+
+Operation
+
+RFC-5MW Front Panel Display
+The fluorescent display is divided into five fields for monitoring the
+MW-10D status.
+
+Display Field
+
+Description
+
+MODE
+
+Shows the present mode of the matching network. This field will
+contain one of three settings:
+•
+
+MAN
+
+Manual tuning mode
+
+•
+
+AUTO Automatic tuning mode
+
+•
+
+REM
+
+Remote control via analog signals
+
+PRESET
+
+Shows the currently selected preset location.
+
+DC BIAS
+
+Shows the DC bias, measured in volts, at the output stud of the
+matching network.
+
+C1
+
+Shows the present position of tuning capacitor C1.
+
+C2
+
+Shows the present position of tuning capacitor C2.
+
+RFC-5MW Front Panel Display
+Table 3.3.1a
+
+MW-10D
+
+3-5
+
+Operation
+
+RFC-5MW Front Panel Buttons
+The eleven push-button switches on the RFC-5MW are described
+below.
+Push-button
+
+Function
+
+SETUP
+
+This button allows the RFC-5MW configuration to be adjusted.
+Refer to your RFC-5MW manual for more information.
+
+LOC/REM
+
+This button selects between Local control and Analog Remote
+control. Local control is the standard mode where the RFC5MW buttons are used to control the MW-10D. When set to
+REM mode, the RFC-5MW push buttons have no effect;
+control is accomplished via analog signal on the Remote
+Interface port (see section 3.3.3).
+
+MODE
+
+This button selects between manual tune mode (MAN) and
+automatic tune mode (AUTO).
+
+PSET ∧
+∧∨
+∨
+
+These two buttons cycle up or down through the presets to
+select a new preset location. Once a preset location has
+been selected, the number in the preset field will start to flash.
+
+STO
+
+This button stores the present tuning capacitor positions after
+a preset location has been selected. When the button is
+pressed, the positions are stored and the preset field stops
+flashing. This button is only active in MAN mode.
+
+RCL
+
+This button recalls the tuning capacitor positions from the
+currently selected preset location. When the button is
+pressed, the positions are recalled and the preset field stops
+flashing.
+
+C1 ∧
+∧∨
+∨
+
+These two buttons are only active in MAN mode. They allow
+the operator to manually move the C1 tuning capacitor
+position up or down from 0 to 99 percent mesh. If a button is
+held down, the capacitor will continue moving in the chosen
+direction until it reaches its end point.
+
+C2 ∧
+∧∨
+∨
+
+These two buttons are only active in MAN mode. They allow
+the operator to manually move the C2 tuning capacitor
+position up or down from 0 to 99 percent mesh. If a button is
+held down, the capacitor will continue moving in the chosen
+direction until it reaches its end point.
+
+RFC-5MW Front Panel Push-buttons
+Table 3.3.1b
+
+3-6
+
+MW-10D
+
+Operation
+
+Manual Tuning Using an RFC-5MW
+To manually tune the MW-10D system, press the MODE button to
+select MAN mode. Use the C1 up and down buttons to adjust the
+position of the C1 tuning capacitor. Use the C2 up and down buttons
+to adjust the position of the C2 tuning capacitor. Adjust C2 for course
+tuning adjustments and C1 for fine tuning adjustments while monitoring
+your reflected power on the generator. Continue to adjust the two
+tuning capacitors until a good match is achieved. You should be able
+to tune the system with reflected power less than 1% of forward power
+(i.e., if forward power is set to 500 W, the reflected power should be
+less than 5 W).
+To save this tune position, if so desired, press the PSET up or down
+buttons to select one of the ten preset locations. The selected location
+should start flashing in the PRESET field on the display. Now press
+the STO button to store the tune position in the MW-10D's controller
+memory. The preset number will stop flashing after pressing the STO
+button.
+To recall this or any stored tune position, simply press the PSET up or
+down buttons to select the desired preset location then press the RCL
+button to recall the setting. The MW-10D will instantly respond by
+moving the tuning capacitors to the previously stored positions.
+
+MW-10D
+
+3-7
+
+Operation
+
+Auto Tuning Using an RFC-5MW
+To let the MW-10D auto tune, first ensure that RF power is OFF.
+Press the MODE button to select AUTO mode. Use the PSET buttons
+to select one of the ten standard preset locations (0 - 9), or one of the
+special Auto mode locations (A - C). In Auto mode the C1 and C2
+positions will automatically be recalled as you cycle through the preset
+locations. Pressing the RCL button is not necessary. This recalled
+position will become the MW-10D's auto tune starting point.
+Now apply RF power. The tuning capacitors will start moving until the
+MW-10D locates the best possible tune point. Within a few seconds
+the MW-10D will stop moving its capacitors and the system should be
+tuned with a reflected power less than 1% of the forward power.
+The three special preset locations available in AUTO mode are
+described as follows:
+
+3-8
+
+PRESET A
+
+Always starts tuning from MAX/MAX
+C1 = 99 and C2 = 99.
+
+PRESET B
+
+The tuning capacitors will start from the position they were at
+when RF power was last turned off; typically the last tuned
+position. This is called the STAY mode.
+
+PRESET C
+
+Starts tuning from a preset position as set by analog voltages
+on the Remote Interface port.
+
+MW-10D
+
+Operation
+
+3.3.2
+
+Local Operation with a Computer or Terminal
+If you choose not to use an RFC-5MW, digital communications can be
+accomplished with a host computer or host terminal through the digital
+portion of the Remote Interface. Commands are sent from the host to
+control and monitor the status of the MW-10D.
+Digital Communications on the Remote Interface
+The digital portion of the Remote Interface uses standard RS-232 or
+RS-422 signals to communicate with the host. The interface supports
+7 or 8 data bits, parity, 1 or 2 stop bits, and data rates up to 19.2 k
+baud. These interface parameters are configurable by the DIP
+switches in the controller unit (see Appendix C).
+Before communications can begin, it is necessary to set the host for
+the same data format (baud rate, number of data bits, parity, stop bits)
+as the MW-10D.
+The default configuration on the MW-10D is as follows:
+9600 Baud
+
+8 Data Bits
+
+1 Stop Bit
+
+No Parity
+
+RS-232 or RS-422 operation is selected by a pair of three-pin jumpers
+on the control board (J3 and J4) inside the controller unit as shown
+below in Figure 3.3.2a.
+
+RS-232
+
+RS-422
+
+J3
+
+2-3
+
+1-2
+
+J4
+
+2-3
+
+1-2
+
+J4
+123
+123
+
+J1
+
+RS-422
+RS-232
+RS-422
+RS-232
+
+J3
+
+Digital Communications Configuration Options
+Figure 3.3.2a
+
+MW-10D
+
+3-9
+
+Operation
+
+The following table specifies the function of each of the pins in the
+digital portion of the REMOTE INTERFACE connector:
+Pin
+
+Name
+
+Function
+
+2
+
+Tx Data
+
+This RS-232 output transmits data from the controller
+unit.
+
+3
+
+Rx Data
+
+This RS-232 input receives data from the host.
+
+5
+
+CTS
+
+This RS-232 input controls the flow of data from the
+controller.
+
+20
+
+DTR
+
+This RS-232 output indicates that the controller is
+ready for communications.
+
+7
+
+Digital Ground
+
+This pin is connected to the digital ground of the
+controller.
+
+24 / 14
+
+RS-422 OUT
+
+Pin 24 is the (+) side and Pin 14 the (-) side of the
+RS-422 balanced pair that transmits data from the
+controller unit.
+
+15 / 16
+
+RS-422 IN
+
+Pin 15 is the (+) side and Pin 16 the (-) side of the
+RS-422 balanced pair that receives data from the
+host.
+
+12 / 13
+
+RS-422 CTS
+
+Pin 12 is the (+) side and Pin 13 the (-) side of the
+RS-422 balanced input pair that controls the flow of
+data from the controller.
+
+18 / 19
+
+RS-422 DTR
+
+Pin 18 is the (+) side and Pin 19 the (-) side of the
+RS-422 balanced output pair that indicates the
+controller is ready for communications.
+
+Digital Remote Interface Pin Outs
+Table 3.3.2a
+
+RS-232 Connection to a Standard Computer or Terminal
+Most computers and terminals have a serial port that uses the RS-232
+interface standard via a 25-way “D” connector. More recent IBM PCcompatible computers use a 9-way “D” connector.
+When using RS-232 communications, it is only necessary to use three
+signals on the MW-10D Remote Interface connector. These signals
+are:
+
+3-10
+
+Tx Data
+
+Pin 2
+
+Rx Data
+
+Pin 3
+
+Digital Ground
+
+Pin 7
+
+MW-10D
+
+Operation
+
+The connecting cable must be wired such that Tx Data from the host
+goes to Rx Data on the MW-10D and Tx Data from the MW-10D goes
+to Rx Data on the host. In effect, the Tx Data and Rx Data lines are
+"cross-coupled." The digital ground must also be connected between
+the host and MW-10D.
+
+Typical PC Connection:
+25 -Way Female 'D'
+Host
+PC
+
+25 -Way Male 'D'
+
+Rx 2
+Tx 3
+GND 7
+
+MW-10D Remote
+2 Tx
+Interface Connector
+3 Rx
+7 GND
+
+If your PC compatible uses a 9-pin 'D' connector for its RS-232 port, the cable is wired as shown
+above except you must use Pin 5 for GND on the PC connector instead of Pin 7.
+
+WYSE Terminal Connection:
+25 -Way Female 'D'
+Host Tx 2
+Terminal Rx 3
+GND7
+
+25 -Way Male 'D'
+2 Tx
+MW-10D Remote
+3 Rx
+Interface Connector
+7 GND
+
+When making a cable, ensure that connections are
+not made to the analog portion of the REMOTE
+INTERFACE connector. These voltage levels are
+incompatible with RS-232 signals and damage could
+occur.
+
+MW-10D
+
+3-11
+
+Operation
+
+RS-422 Bussing
+If you are using RS-422 signals on the Remote Interface, one
+controlling computer (or terminal) can be connected to multiple digital
+MATCHWORK® units. Up to sixteen systems can be bussed together
+by connecting the RS-422 receive and transmit data lines in parallel as
+shown in the following diagram (Figure 3.3.2b). However, each unit
+must be set for a specific RS-422 address. When this mode of
+operation is used, it is necessary to use the IDE command and link
+release character as described in “Basic Monitor Commands.”
+MW - 10D
+
+MW - 10D
+
+ADDR 0
+
+ADDR 1
+
+ENI
+Rx
++ -
+
+Tx
++ -
+
+Rx
++ -
+
+Tx
++ -
+
+Data to MW-10D
+
+{
+
+Data from MW-10D
+
+Multiple MATCHWORK Connections to a Host
+Figure 3.3.2b
+
+To set a MW-10D for a specific address, you must change DIP
+Switches #1-4 on the control board in the controller unit. All digital
+MATCHWORK controllers come from the factory set for an address of
+0.
+The table below shows how to set DIP Switches #1-4 for a different
+address.
+
+Address
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+Switch 1
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+ON
+
+OFF
+
+Switch 2
+
+ON
+
+ON
+
+OFF OFF
+
+ON
+
+ON
+
+OFF OFF
+
+ON
+
+ON
+
+OFF OFF
+
+ON
+
+ON
+
+OFF OFF
+
+Switch 3
+
+ON
+
+ON
+
+ON
+
+ON
+
+OFF OFF OFF OFF
+
+ON
+
+ON
+
+ON
+
+OFF OFF OFF OFF
+
+Switch 4
+
+ON
+
+ON
+
+ON
+
+ON
+
+ON
+
+OFF OFF OFF OFF OFF OFF OFF OFF
+
+ON
+
+ON
+
+ON
+
+ON
+
+DIP Switch Selection
+Table 3.3.2b
+
+3-12
+
+MW-10D
+
+Operation
+
+Communications Protocol
+Data is transferred to and from the MW-10D using a simple ASCII
+protocol that functions with a standard terminal. Whether you are
+using RS-232, RS-422, bussing or not, the communications protocol
+and commands are the same.
+Command Structure
+All commands are composed of three-letter characters, followed by
+numbers where applicable, and terminated by a carriage return. All
+command characters must be correct for a command to be accepted.
+Since all characters are echoed, the controlling computer or terminal
+can check that the commands were correctly received by comparing
+the echoed characters with what was sent.
+Commands containing numerical fields will only be accepted if the
+numerical portion is in a specified range depending upon the
+command.
+Upon receipt of a carriage return ($0D), the controller returns a
+carriage return ($0D) and a line feed ($0A) so that the terminal screen
+is correctly formatted. If the command was correctly received in the
+proper format, a star prompt (*) is returned. If a bad command is
+received, an error prompt is returned that consists of a bell character
+($07) and a question mark (?). The two responses are ordered as
+follows:
+
+Correct Response: [CR] [LF] [*]
+Error Response:
+
+[CR] [LF] [BELL] [?]
+
+The protocol always returns one of these two responses after
+command execution.
+Illegal Commands
+Unrecognized commands or out-of-range numerical values are ignored
+and enunciated by the return of the error response. The same occurs
+if the limits of the line buffer are exceeded (16 characters). Note that a
+carriage return on its own is a valid command that does nothing (no
+operation).
+Space Characters
+To allow screen formatting, space characters ($20) are echoed on the
+serial link. However, they are ignored for command information.
+
+MW-10D
+
+3-13
+
+Operation
+
+Leading Zeros
+The numerical part of a command need not contain leading zeros,
+although leading zeros will be echoed and accepted if they are sent. If
+a numerical field is empty, it is assumed to be zero.
+Backspace Characters
+Backspace or delete characters ($08) or ($7F) allow limited editing.
+When either one of these characters is received, the last character in
+the line buffer is deleted and the following three characters are
+returned on the serial link:
+[BS] [SPACE] [BS]
+
+This ensures that a terminal screen backspaces its cursor and
+removes the last character.
+Special Characters
+Five characters have a special purpose and are the only characters not
+echoed on the serial link. The escape character ($1B) allows the
+operator to break out of continuous loops. The CONTROL-W
+character (^W) is used to maintain link integrity. The exclamation mark
+(!) is used to cause an immediate release of the RS-422 buffer if two
+consecutive exclamation marks are received in a row. The XON and
+XOFF characters (^Q and ^S) allow flow control of the serial data.
+Escape from Indefinite Loops
+Some commands can be made to continue indefinitely with the use of
+the dash <-> option. The escape character ($1B) or ESC key is used
+to exit from this condition. Upon receipt of the escape character, the
+controller will terminate the loop and respond with the standard
+command completion string.
+XON and XOFF
+When XOFF is received (^S), transmission of serial data from the
+controller is halted. When XON is received (^Q), transmission of serial
+data will resume.
+Power-Up Message
+Power up is confirmed by a special message terminated by a special
+prompt—a star enclosed in curly brackets {*}. This is the only time that
+this prompt is used; therefore, a controlling computer can use this to
+see that a unit has powered up correctly. The complete power-up
+string is as follows:
+[CR] [LF] [message string] [CR] [LF] [BELL] [{] [*] [}]
+3-14
+
+MW-10D
+
+Operation
+
+MW-10D Commands
+The MW-10D has a set of low-level commands that are used to control
+and monitor the status of the system. These commands are intended
+to be used for creating software control programs for the MW-10D.
+However, the user can use these commands individually for testing
+and debugging the system.
+The commands are grouped into four categories:
+•
+•
+•
+•
+
+Basic Monitor Commands
+Mode Selection Commands
+Tune Control Commands
+Status Readback Commands
+
+Many of the commands have options available that are shown in
+brackets (< >) after the command. When these options are used, the
+brackets should not be included in the command. For example, if you
+wish to view Help Screen Number 3, type HEL 3 not HEL <3>.
+Basic Monitor Commands
+This set of commands allows limited access to the controller software:
+Command
+
+Function
+
+HEL <n>
+
+Displays on-line help screens. HEL by itself will show a menu
+of available help screens. To view a specific help screen, use
+the <n> option where <n> is the number of the specific
+screen.
+
+CHK <x-y>
+
+Calculates the checksum of the selected program range from
+x to y. The checksum is a simple additive type where each
+byte is added to the next for a final total. If you use the
+address range of 0000-FFFF, the last four digits of the
+number returned should match the firmware number listed on
+the ROM label in the controller unit.
+
+IDE <n>
+
+This command is used for RS-422 bus switching.
+<n> is a value from 0-15 corresponding to the address of the
+controller you wish to select. The controller address is
+selected by DIP switches inside the controller unit (see
+section "RS-422 Bussing").
+
+!!
+
+This command is called "Link Release" and is used for
+RS-422 bus switching. When two exclamation marks are
+sent in a row, all listening controllers will tri-state their RS-422
+output. This is done to avoid data collisions if multiple
+controllers are being used.
+The proper way to switch from one controller to another is to
+execute Link Release (!!) and then use the IDE command to
+select the new controller.
+
+Basic Monitor Commands
+Table 3.3.2c
+MW-10D
+
+3-15
+
+Operation
+
+Mode Selection Commands
+The following commands are used to select the control mode of the
+MW-10D:
+
+Command
+
+Function
+
+REM
+
+Places the MW-10D into Analog Remote Control mode.
+When using this mode, the tune control commands will have
+no effect. Use of these commands will return the standard
+error prompt. However, all readback commands will still
+function. Control is accomplished via analog signals on the
+Remote Interface (see section 3.3.3).
+
+LOC
+
+Places the MW-10D into Local Control mode. In this mode
+the tune control commands are used to control the system.
+Analog signals on the Remote Interface port are ignored.
+
+TLR
+
+Toggles the MW-10D between LOC and REM mode.
+
+TAM
+
+When operating in LOC mode this command will toggle the
+MW-10D between Auto Tune mode and Manual Tune
+mode. This command will return the standard error
+response if used in REM mode.
+
+Mode Selection Commands
+Table 3.3.2d
+
+3-16
+
+MW-10D
+
+Operation
+
+Tune Control Commands
+These commands provide control of the tuning functions for the MW10D system. All commands with the <n> option allow parameters to
+be passed. If parameters are omitted it will be assumed to have a
+value of 0.
+
+Command
+
+Function
+
+SCO <n>
+
+Sets the C1 tuning capacitor position.
+<n> is a decimal number from 0-99 representing the position
+in percent meshed. This command can only be used in
+manual tune mode.
+
+SCT <n>
+
+Sets the C2 tuning capacitor position.
+<n> is a decimal number from 0-99 representing the position
+in percent meshed. This command can only be used in
+manual tune mode.
+
+G01 <n>
+
+Sets the C1 tuning capacitor position.
+<n> is a hex number from 00-63 representing the position in
+percent meshed. This command can only be used in manual
+tune mode.
+
+G02 <n>
+
+Sets the C2 tuning capacitor position.
+<n> is a hex number from 00-63 representing the position in
+percent meshed. This command can only be used in manual
+tune mode.
+
+ICO
+
+Increments the C1 tuning capacitor by one step.
+
+DCO
+
+Decrements the C1 tuning capacitor by one step.
+
+ICT
+
+Increments the C2 tuning capacitor by one step.
+
+DCT
+
+Decrements the C2 tuning capacitor by one step.
+These commands can only be used in manual tune mode.
+
+ADJ
+
+Displays a menu that allows for adjustment of the C1 and C2
+tuning capacitors while simultaneously monitoring their
+position. Adjustment is made by pressing keys on the
+keyboard. This command is only available in manual tune
+mode and is intended for debugging use only.
+
+IPR
+
+Increments the preset location by one.
+
+Tuning Commands
+Table 3.3.2e
+
+MW-10D
+
+3-17
+
+Operation
+
+Command
+
+Function
+
+DPR
+
+Decrements the preset location by one.
+In manual tune mode these commands will cycle through
+preset locations 0-9. In auto tune mode these commands
+cycle through preset locations 0-9 and special modes A-C.
+Each time one of these commands is executed in auto tune
+mode, the tuning capacitor positions will be instantly recalled
+from the new location.
+
+STO <n>
+
+Stores the present C1 and C2 tuning capacitor positions in a
+specified preset location.
+<n> is a value from 0-9 or <=> that specifies the preset
+location. If <=> is used, the capacitor positions will be stored
+in the currently selected preset location. This command can
+only be used in manual tune mode.
+
+RCL <n>
+
+Recalls the C1 and C2 tuning capacitor positions from a
+specified preset location.
+<n> is a value from 0-9 or <=> that specifies the preset
+location. If <=> is used, the capacitor positions will be
+recalled from the currently selected preset location. This
+command can only be used in manual tune mode.
+
+MOD <n>
+
+Sets the tuning capacitors starting point for auto tune mode by
+changing the current preset location.
+<n> is one of the standard preset locations 0-9 or special
+locations A-C.
+If this command is executed in manual tune mode, the current
+preset location will not change until the TAM command is
+used to switch to auto tune mode.
+
+Tuning Commands (Cont'd.)
+Table 3.3.2e
+
+The three special preset locations available in Auto Tune mode are
+described as follows:
+
+3-18
+
+PRESET A
+
+Always starts tuning from MAX/MAX
+C1 = 99 and C2 = 99.
+
+PRESET B
+
+Tuning capacitors will start from the position where they were
+when RF power was last turned off; typically the last tuned
+position. This is called the STAY mode.
+
+PRESET C
+
+Starts tuning from a preset position as set by analog voltages
+on the Remote Interface port.
+
+MW-10D
+
+Operation
+
+Status Readback Commands
+This set of commands is used to read back information on the current
+state of the MW-10D. Commands shown with the dash option <-> can
+be followed by a dash for continuous readback. To stop the
+continuous readback of these commands, press the ESC key on the
+keyboard or send the ESC character ($1B) from your software.
+
+Command
+
+Function
+
+RDC <->
+
+Returns the DC bias voltage on the system.
+
+RPP <->
+
+Returns the peak-to-peak voltage measured at the output stud.
+This command is useful only if the optional Vpp circuit is
+installed in the controller unit. If the circuit is not installed,
+garbage values will be returned.
+
+RCO <->
+
+Returns the current position of the C1 tuning capacitor in terms
+of percent meshed (0-99).
+
+RCT <->
+
+Returns the current position of the C2 tuning capacitor in terms
+of percent meshed (0-99).
+
+RPS
+
+Returns a two-digit hex number that represents the current
+operating status of the MW-10D.
+The first digit (most significant digit) shows the current
+operating mode. Values range from 1-3:
+1 = Manual Tune Mode
+2 = Analog Remote Control Mode
+3 = Auto Tune Mode
+The second digit (least significant digit) shows the currently
+selected preset location. Values representing the preset
+location range from 0-9 and A-C.
+
+ACT <->
+
+Returns status information on the MW-10D in a batch format
+for quick processing. The information sent is a packet of all
+five commands described above.
+The packet is sent in the following order:
+
+RDC
+
+RPP
+
+RCO
+
+RCT
+
+RPS
+
+This command is intended mostly for software programming as
+the fields in the packet are not separated by any spaces. Each
+field is five characters long except RPS, which is only two
+characters.
+
+Status Readback Commands
+Table 3.3.2f
+
+MW-10D
+
+3-19
+
+Operation
+
+Command
+
+Function
+
+RFV <=>
+
+Returns a 16-bit value formatted as 4 hex digits. The first digit is
+the most significant digit and the last digit is the least significant
+digit. This value is known as the "Fault Vector."
+Bit definitions are as follows:
+Digit 1
+Bit 15
+Bit 14
+Bit 13
+Bit 12
+
+Spare
+Controller Hardware Fault
+Code ROM Fault
+External RAM Fault (DS1225)
+
+Digit 2
+Bit 11
+Bit 10
+Bit 9
+Bit 8
+
+Internal RAM Fault (80C552)
+Spare
+Spare
+Spare
+
+Digit 3
+All bits are currently unused.
+Digit 4
+All bits are currently unused.
+If the <=> option is used, the faults are returned in plain English
+instead of a hex number. This is useful for debugging purposes.
+RUT <=>
+
+Returns the amount of time the MW-10D has been powered ON.
+If RUT is typed alone, the value returned is the amount of time in
+hours only. If the <=> option is used, the value returned will be in
+the HH.MM.SS format.
+
+RVE
+
+Returns the version number of the software installed in your
+controller unit. This should match the version number printed on
+the ROM label in the controller unit.
+
+Status Readback Commands (Cont'd.)
+Table 3.3.2f
+
+3-20
+
+MW-10D
+
+Operation
+
+3.3.3
+
+Remote Operation with Analog Signals
+Another option for controlling the MW-10D is through the analog
+portion of the Remote Interface port. To use these analog signals, the
+MW-10D must be set for Analog Remote operation. This is
+accomplished by pressing the LOC/REM button on the RFC-5MW to
+set REM mode or using the REM command from a computer or
+terminal.
+Once this mode is engaged, the pins on the analog portion of the
+Remote Interface connector may be used as described in the table
+below.
+Pin
+
+Name
+
+Function
+
+9
+
++15 V Power
+
+Output: A +15 VDC power output for user connections.
+Current is limited to 30 mA with a 470Ω resistor.
+
+25
+
+Analog
+Ground
+
+Ground: This is the ground reference for all of the analog
+signals.
+
+6
+
+Auto/Man
+
+Input: This input is used to select between Auto tune or
+Manual tune modes. When this pin is left open, the
+MW-10D will be set to Auto Tune mode. When this pin is
+connected to Ground (Pin 25), the MW-10D will be set to
+Manual Tune mode.
+
+10
+
+C1 Position
+
+Output: A DC voltage between 0 and 10 V that indicates
+the position of the C1 tuning capacitor.
+0 V = 0% meshed. 10 V = 100% meshed.
+
+4
+
+C2 Position
+
+Output: A DC voltage between 0 and 10 V that indicates
+the position of the C2 tuning capacitor.
+0 V = 0% meshed. 10 V = 100% meshed.
+
+8
+
+C1 Control
+
+Input: A DC voltage between 0 and 10 V that sets the
+position of the C1 tuning capacitor when the unit is in
+Manual Tune mode.
+0 V = 0% meshed. 10 V = 100% meshed.
+
+11
+
+C2 Control
+
+Input: A DC voltage between 0 and 10 V that sets the
+position of the C2 tuning capacitor when the unit is in
+Manual Tune mode.
+0 V = 0% meshed. 10 V = 100% meshed.
+
+22
+
+DC Bias
+
+Output: A DC voltage between 0 and 10 V that represents
+the DC bias level on the MW-10D.
+1 V output = 200 V DC bias.
+
+23
+
+Vp-p
+
+Output: A DC voltage between 0 and 10 V that represents
+the peak-to-peak voltage at the output stud of the MW10D. This signal is valid only if an optional Vp-p circuit is
+installed in the controller unit.
+
+17
+
+Power ON
+Monitor
+
+Output: An open collector signal that indicates when the
+MW-10D power is turned ON.
+
+Analog Remote Interface Pin Outs
+Table 3.3.3
+MW-10D
+
+3-21
+
+Operation
+
+Tuning Mode Selection
+When using Analog Remote Control, the tuning mode is selected by
+changing the state of Pin 6 (Auto/Man Select) on the Remote Interface
+connector.
+This input runs through the input side of an opto-isolator pulled up to
++15 V through a 1.0 kΩ resistor and a 6.2 V zener diode. When this
+input is left open, no current will flow through the opto-isolator, thus
+leaving it off and selecting Auto Tune mode. When this input is
+grounded, current will flow through the opto-isolator (approximately
+5 mA), turning it on and therefore selecting Manual Tune mode.
+Auto Tune Mode
+This mode is selected by leaving the Auto/Man select input open.
+In this mode the system will auto tune whenever RF is detected. The
+starting position for the tuning capacitors will be the positions stored in
+the preset location selected prior to entering Analog Remote mode.
+The position of the tuning capacitors can be read by the C1 and C2
+position voltages on Pins 10 and 4 respectively.
+
+Auto/Man
+
+Tuner Unit
+Phase
+Match
+Magnitude
+Sensors
+
+i=0mA
+
+M1
+
+C2 Position
+C1 Position
+
+3-22
+
+Controller
+Unit
+
+M2
+
+MW-10D
+
+Operation
+
+Manual Tune Mode
+This mode is selected by grounding the Auto/Man select input. Use
+ground on Pin 25.
+In this mode, separate DC voltages on the C1 and C2 control inputs
+are used to set the position of the individual tuning capacitors.
+The position of each tuning capacitor can be read by the C1 and C2
+position voltages on Pins 10 and 4 respectively.
+Auto/Man
+
+i=5mA
+
+Tuner Unit
+M1
+
+C1 Control
+C2 Control
+C2 Position
+C1 Position
+
+MW-10D
+
+Controller
+Unit
+
+M2
+
+3-23
+
+Operation
+
+3.4
+
+Automatic Control Mode
+The MW-10D can be set up to operate as a stand-alone unit. This is
+accomplished by setting DIP Switch #12 to the ON position, thereby
+selecting the Automatic Control mode.
+When the MW-10D is set for automatic control, the system is locked
+into Auto Tune mode and will therefore auto tune whenever RF power
+is detected. When RF power is shut off, the capacitors will move to
+the preselected starting point. The starting point is one of the standard
+preset locations 0-9 or special locations A-B. Preset C is not a valid
+option in the Automatic Control mode.
+The starting point is selected by setting DIP Switches #1-4 on the
+control board in the controller unit. Usually these switches control the
+RS-422 bus address. However, the function of these four switches
+changes when DIP Switch #12 is ON.
+The following table shows how to set DIP Switches #1-4 to select the
+desired preset location.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+3-24
+
+Preset Select 0
+Preset Select 1
+Preset Select 2
+Preset Select 3
+
+4
+
+3
+
+ON ON
+ON ON
+ON ON
+ON ON
+ON OFF
+ON OFF
+ON OFF
+ON OFF
+OFF ON
+OFF ON
+OFF ON
+OFF ON
+
+2
+
+1
+
+Location
+
+ON
+ON
+OFF
+OFF
+ON
+ON
+OFF
+OFF
+ON
+ON
+OFF
+OFF
+
+ON
+OFF
+ON
+OFF
+ON
+OFF
+ON
+OFF
+ON
+OFF
+ON
+OFF
+
+PRESET 0
+PRESET 1
+PRESET 2
+PRESET 3
+PRESET 4
+PRESET 5
+PRESET 6
+PRESET 7
+PRESET 8
+PRESET 9
+PRESET A
+PRESET B
+
+Control Mode Select = ON
+
+PRESET A
+
+Always starts tuning from MAX/MAX
+C1 = 99 and C2 = 99.
+
+PRESET B
+
+The tuning capacitors will start from the position where they
+were when RF power was last turned off; typically the last
+tuned position. This is called the STAY mode.
+
+MW-10D
+
+Appendix B
+
+B.3
+
+Remote Interface Connector
+This connector is a 25-way female connector. The following table
+provides a description of each pin of the Remote Interface connector.
+1
+
+13
+
+25
+
+14
+
+Pin
+
+Name
+
+Description
+
+1
+
+----
+
+No Connection
+
+2
+
+TX- DATA
+
+Output: RS-232 Transmit Data
+
+3
+
+RX- DATA
+
+Input: RS-232 Receive Data
+
+4
+
+C2 POS
+
+Output: C2 Position Voltage
+
+5
+
+CTS
+
+Input: RS-232 Clear to Send
+
+6
+
+AUTO/MAN
+
+Input: Auto/Man Tune Mode Select
+
+7
+
+DGND
+
+Digital Ground
+
+8
+
+C1 CONTROL
+
+Input: C1 Control Voltage
+
+9
+
++15 VDC
+
+Output: User Voltage (30 mA Maximum)
+
+10
+
+C1 POS
+
+Output: C1 Position Voltage
+
+11
+
+C2 CONTROL
+
+Input: C2 Control Voltage
+
+12
+
+CTS (+)
+
+Input: RS-422 Clear to Send
+
+13
+
+CTS (-)
+
+Input: RS-422 Clear to Send
+
+14
+
+RS-422 OUT (-)
+
+Output: RS-422 Transmit Data
+
+15
+
+RS-422 IN (+)
+
+Output: RS-422 Receive Data
+
+16
+
+RS-422 IN (-)
+
+Input: RS-422 Receive Data
+
+17
+
+POWER ON
+
+Output: Power Monitor (O.C. Output)
+
+18
+
+DTR (+)
+
+Output: RS-422 Data Terminal Ready
+
+19
+
+DTR (-)
+
+Output: RS-422 Data Terminal Ready
+
+20
+
+DTR
+
+Output: RS-232 Data Terminal Ready
+
+21
+
+----
+
+No Connection
+
+22
+
+DC BIAS
+
+Output: DC Bias Monitor Voltage
+
+23
+
+VPP
+
+Output: Spare Output Voltage
+
+24
+
+RS-422 OUT (+)
+
+Output: RS-422 Transmit Data
+
+25
+
+AGND
+
+Analog Ground
+
+Remote Interface Pin Outs
+Table B.3
+
+B-4
+
+MW-10D
+
+

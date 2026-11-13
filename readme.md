@@ -14,7 +14,7 @@ V0: The debugger. Sends a one-shot ACT readback request every 200 ms (configurab
 V1: The super basic wrapper. Defaults to raw listening mode, sending ACT- and directly dumping serial output to the terminal. Polling mode sends one-shot ACT requests every 200 ms by default (configurable). Type t and press Enter to toggle modes.
 
 
-V1.5: Safe super basic wrapped. Same as above, but first submits commands to ensure device is in local control, then automatic tuning mode. 
+V1.5: Tkinter status display with repeated one-shot ACT polling (50 ms by default) and raw serial output left visible in the terminal. The command field accepts `Toggle`, `C1 X`, and `C2 X`; every mode or capacitor write requires terminal y/n confirmation. Startup reads the current mode without changing it. Capacitor writes are enabled only in Manual Tune mode, and closing or losing the connection does not send an automatic mode change.
 
 
 V2: A better controller all together. Fully stateful, GUI based. Password and safety lock-outs. Upon booting, checks for connectivity, and retries in set loops on failures. When a reboot event is seen by the presence of the bootup message, logs the reboot and resets the state for safety. If link and readback is good, it then figures out state of mode and preset, and updates its internals state to match.
